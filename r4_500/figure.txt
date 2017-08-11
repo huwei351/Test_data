@@ -1,0 +1,104 @@
+filename = ./accuracy_test/Accuracy_Test_8.txt, fileindex = 8
+one_count = 112/1644(0.0681265206813)
+zero_count = 521/1644(0.316909975669)
+dst_count = 473/1644(0.287712895377)
+极差为：21
+平均数为：4.94
+中位数为：3.0
+众数为：[0]
+方差为：25.93
+filename = ./accuracy_test/Accuracy_Test_4.txt, fileindex = 4
+one_count = 99/1644(0.0602189781022)
+zero_count = 521/1644(0.316909975669)
+dst_count = 435/1644(0.264598540146)
+极差为：21
+平均数为：5.10
+中位数为：4.0
+众数为：[0]
+方差为：26.79
+filename = ./accuracy_test/Accuracy_Test_0.txt, fileindex = 0
+one_count = 98/1644(0.0596107055961)
+zero_count = 521/1644(0.316909975669)
+dst_count = 428/1644(0.260340632603)
+极差为：21
+平均数为：5.29
+中位数为：4.0
+众数为：[0]
+方差为：28.46
+filename = ./accuracy_test/Accuracy_Test_5.txt, fileindex = 5
+one_count = 99/1644(0.0602189781022)
+zero_count = 521/1644(0.316909975669)
+dst_count = 445/1644(0.270681265207)
+极差为：21
+平均数为：5.05
+中位数为：4.0
+众数为：[0]
+方差为：26.41
+filename = ./accuracy_test/Accuracy_Test_10.txt, fileindex = 10
+one_count = 103/1644(0.0626520681265)
+zero_count = 521/1644(0.316909975669)
+dst_count = 470/1644(0.285888077859)
+极差为：21
+平均数为：5.03
+中位数为：4.0
+众数为：[0]
+方差为：26.72
+filename = ./accuracy_test/Accuracy_Test_2.txt, fileindex = 2
+one_count = 99/1644(0.0602189781022)
+zero_count = 521/1644(0.316909975669)
+dst_count = 429/1644(0.260948905109)
+极差为：21
+平均数为：5.17
+中位数为：4.0
+众数为：[0]
+方差为：27.44
+filename = ./accuracy_test/Accuracy_Test_9.txt, fileindex = 9
+one_count = 111/1644(0.0675182481752)
+zero_count = 521/1644(0.316909975669)
+dst_count = 469/1644(0.285279805353)
+极差为：21
+平均数为：4.92
+中位数为：3.0
+众数为：[0]
+方差为：25.71
+filename = ./accuracy_test/Accuracy_Test_1.txt, fileindex = 1
+one_count = 98/1644(0.0596107055961)
+zero_count = 521/1644(0.316909975669)
+dst_count = 427/1644(0.259732360097)
+极差为：21
+平均数为：5.20
+中位数为：4.0
+众数为：[0]
+方差为：27.60
+filename = ./accuracy_test/Accuracy_Test_7.txt, fileindex = 7
+one_count = 96/1644(0.0583941605839)
+zero_count = 521/1644(0.316909975669)
+dst_count = 461/1644(0.280413625304)
+极差为：21
+平均数为：4.99
+中位数为：4.0
+众数为：[0]
+方差为：25.96
+filename = ./accuracy_test/Accuracy_Test_6.txt, fileindex = 6
+one_count = 94/1644(0.0571776155718)
+zero_count = 521/1644(0.316909975669)
+dst_count = 449/1644(0.273114355231)
+极差为：21
+平均数为：5.04
+中位数为：4.0
+众数为：[0]
+方差为：26.21
+filename = ./accuracy_test/Accuracy_Test_3.txt, fileindex = 3
+one_count = 98/1644(0.0596107055961)
+zero_count = 521/1644(0.316909975669)
+dst_count = 430/1644(0.261557177616)
+极差为：21
+平均数为：5.14
+中位数为：4.0
+众数为：[0]
+方差为：27.16
+[8, 4, 0, 5, 10, 2, 9, 1, 7, 6, 3]
+[112, 99, 98, 99, 103, 99, 111, 98, 96, 94, 98]
+[521, 521, 521, 521, 521, 521, 521, 521, 521, 521, 521]
+[473, 435, 428, 445, 470, 429, 469, 427, 461, 449, 430]
+
