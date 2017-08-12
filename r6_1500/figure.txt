@@ -7,6 +7,24 @@ dst_count = 377/644(0.585403726708)
 中位数为：4.0
 众数为：[1]
 方差为：18.76
+filename = ./accuracy_test/Accuracy_Test_9.txt, fileindex = 9
+one_count = 95/644(0.14751552795)
+zero_count = 30/644(0.0465838509317)
+dst_count = 382/644(0.593167701863)
+极差为：18
+平均数为：5.01
+中位数为：4.0
+众数为：[1]
+方差为：15.16
+filename = ./accuracy_test/Accuracy_Test_10.txt, fileindex = 10
+one_count = 97/644(0.150621118012)
+zero_count = 30/644(0.0465838509317)
+dst_count = 379/644(0.58850931677)
+极差为：18
+平均数为：4.87
+中位数为：4.0
+众数为：[1]
+方差为：12.85
 filename = ./accuracy_test/Accuracy_Test_4.txt, fileindex = 4
 one_count = 91/644(0.141304347826)
 zero_count = 30/644(0.0465838509317)
@@ -34,15 +52,6 @@ dst_count = 309/644(0.479813664596)
 中位数为：5.0
 众数为：[1]
 方差为：23.74
-filename = ./accuracy_test/Accuracy_Test_10.txt, fileindex = 10
-one_count = 97/644(0.150621118012)
-zero_count = 30/644(0.0465838509317)
-dst_count = 379/644(0.58850931677)
-极差为：18
-平均数为：4.87
-中位数为：4.0
-众数为：[1]
-方差为：12.85
 filename = ./accuracy_test/Accuracy_Test_2.txt, fileindex = 2
 one_count = 92/644(0.142857142857)
 zero_count = 30/644(0.0465838509317)
@@ -52,15 +61,6 @@ dst_count = 231/644(0.358695652174)
 中位数为：7.0
 众数为：[1]
 方差为：25.00
-filename = ./accuracy_test/Accuracy_Test_9.txt, fileindex = 9
-one_count = 95/644(0.14751552795)
-zero_count = 30/644(0.0465838509317)
-dst_count = 382/644(0.593167701863)
-极差为：18
-平均数为：5.01
-中位数为：4.0
-众数为：[1]
-方差为：15.16
 filename = ./accuracy_test/Accuracy_Test_1.txt, fileindex = 1
 one_count = 92/644(0.142857142857)
 zero_count = 30/644(0.0465838509317)
