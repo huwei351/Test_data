@@ -518,7 +518,9 @@ def everyYearResultFile(fileindex):
 	pro5 = []
 	pro6 = []
 	pro7 = []
-	for i in range(16, len(linesListFull)+1):
+	pro8 = []
+	pro8_1 = []
+	for i in range(31, len(linesListFull)+1):
 		linesList = linesListFull[:i]    
 		arr0 = [x[0] for x in linesList]
 		arr1 = [x[1].strip().split(',') for x in linesList]
@@ -586,15 +588,15 @@ def everyYearResultFile(fileindex):
 		arr8_5 = [string.atoi(x[5]) for x in arr8]
 		arr = arr1_0 + arr2_0 + arr3_0 + arr4_0 + arr5_0 + arr6_0
 		print("i = " + bytes(i))
-		print("Red1 Num Avg = " + bytes(Math.avg(arr1_0)))
-		print("Red2 Num Avg  = " + bytes(Math.avg(arr2_0)))
-		print("Red3 Num Avg  = " + bytes(Math.avg(arr3_0)))
-		print("Red4 Num Avg  = " + bytes(Math.avg(arr4_0)))
-		print("Red5 Num Avg  = " + bytes(Math.avg(arr5_0)))
-		print("Red6 Num Avg  = " + bytes(Math.avg(arr6_0)))
-		print("Blue Num Avg  = " + bytes(Math.avg(arr7_0)))
-		print("RedSum avg = " + bytes(Math.avg(arr8_0)))
-		print("UnitSum avg = " + bytes(Math.avg(arr8_1)))
+		print("Red1 Num Avg = " + bytes(sum(arr1_0)) + "/" + bytes(len(arr1_0)) + " = " + bytes(Math.avg(arr1_0)))
+		print("Red2 Num Avg = " + bytes(sum(arr2_0)) + "/" + bytes(len(arr2_0)) + " = " + bytes(Math.avg(arr2_0)))
+		print("Red3 Num Avg = " + bytes(sum(arr3_0)) + "/" + bytes(len(arr3_0)) + " = " + bytes(Math.avg(arr3_0)))
+		print("Red4 Num Avg = " + bytes(sum(arr4_0)) + "/" + bytes(len(arr4_0)) + " = " + bytes(Math.avg(arr4_0)))
+		print("Red5 Num Avg = " + bytes(sum(arr5_0)) + "/" + bytes(len(arr5_0)) + " = " + bytes(Math.avg(arr5_0)))
+		print("Red6 Num Avg = " + bytes(sum(arr6_0)) + "/" + bytes(len(arr6_0)) + " = " + bytes(Math.avg(arr6_0)))
+		print("Blue Num Avg = " + bytes(sum(arr7_0)) + "/" + bytes(len(arr7_0)) + " = " + bytes(Math.avg(arr7_0)))
+		print("RedSum Avg = " + bytes(sum(arr8_0)) + "/" + bytes(len(arr8_0)) + " = " + bytes(Math.avg(arr8_0)))
+		print("UnitSum Avg = " + bytes(sum(arr8_1)) + "/" + bytes(len(arr8_1)) + " = " + bytes(Math.avg(arr8_1)))
 		index += [i]
 		pro1 += [Math.avg(arr1_0)]
 		pro2 += [Math.avg(arr2_0)]
@@ -603,14 +605,18 @@ def everyYearResultFile(fileindex):
 		pro5 += [Math.avg(arr5_0)]
 		pro6 += [Math.avg(arr6_0)]
 		pro7 += [Math.avg(arr7_0)]
+		pro8 += [Math.avg(arr8_0)]
+		pro8_1 += [Math.avg(arr8_1)]
 	plt.figure()
-	plt.scatter(index, pro1, s=20, c="black")
+	#plt.scatter(index, pro1, s=20, c="black")
 	#plt.scatter(index, pro2, s=20, c="yellow")
 	#plt.scatter(index, pro3, s=20, c="red")
 	#plt.scatter(index, pro4, s=20, c="gold")
 	#plt.scatter(index, pro5, s=20, c="brown")
 	#plt.scatter(index, pro6, s=20, c="coral")
 	#plt.scatter(index, pro7, s=20, c="blue")
+	#plt.scatter(index, pro8, s=20, c="yellow")
+	plt.scatter(index, pro8_1, s=20, c="red")
 	plt.savefig("test.jpg")
 	plt.show()
 '''
