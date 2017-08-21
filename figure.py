@@ -507,119 +507,74 @@ def everyYearResultFile(fileindex):
 	filename = TEST_DIR + "/" + TEST_FILE_HEAD + bytes(fileindex) + ".txt"
 	print("filename = " + filename)
 	file = open(filename, 'r')
-	linesListFull = file.readlines()
-	linesListFull = [line.strip().split('/') for line in linesListFull]
+	linesList = file.readlines()
+	linesList = [line.strip().split('/') for line in linesList]
 	file.close()
-	index = []
-	pro1 = []
-	pro2 = []
-	pro3 = []
-	pro4 = []
-	pro5 = []
-	pro6 = []
-	pro7 = []
-	pro8 = []
-	pro8_1 = []
-	for i in range(31, len(linesListFull)+1):
-		linesList = linesListFull[:i]    
-		arr0 = [x[0] for x in linesList]
-		arr1 = [x[1].strip().split(',') for x in linesList]
-		arr1_0 = [string.atoi(x[0]) for x in arr1]
-		arr1_1 = [string.atoi(x[1]) for x in arr1]
-		arr1_2 = [string.atoi(x[2]) for x in arr1]
-		arr1_3 = [string.atoi(x[3]) for x in arr1]
-		arr1_4 = [string.atoi(x[4]) for x in arr1]
-		arr1_5 = [string.atoi(x[5]) for x in arr1]
-		arr1_6 = [string.atoi(x[6]) for x in arr1]
-		arr2 = [x[2].strip().split(',') for x in linesList]
-		arr2_0 = [string.atoi(x[0]) for x in arr2]
-		arr2_1 = [string.atoi(x[1]) for x in arr2]
-		arr2_2 = [string.atoi(x[2]) for x in arr2]
-		arr2_3 = [string.atoi(x[3]) for x in arr2]
-		arr2_4 = [string.atoi(x[4]) for x in arr2]
-		arr2_5 = [string.atoi(x[5]) for x in arr2]
-		arr2_6 = [string.atoi(x[6]) for x in arr2]
-		arr3 = [x[3].strip().split(',') for x in linesList]
-		arr3_0 = [string.atoi(x[0]) for x in arr3]
-		arr3_1 = [string.atoi(x[1]) for x in arr3]
-		arr3_2 = [string.atoi(x[2]) for x in arr3]
-		arr3_3 = [string.atoi(x[3]) for x in arr3]
-		arr3_4 = [string.atoi(x[4]) for x in arr3]
-		arr3_5 = [string.atoi(x[5]) for x in arr3]
-		arr3_6 = [string.atoi(x[6]) for x in arr3]
-		arr4 = [x[4].strip().split(',') for x in linesList]
-		arr4_0 = [string.atoi(x[0]) for x in arr4]
-		arr4_1 = [string.atoi(x[1]) for x in arr4]
-		arr4_2 = [string.atoi(x[2]) for x in arr4]
-		arr4_3 = [string.atoi(x[3]) for x in arr4]
-		arr4_4 = [string.atoi(x[4]) for x in arr4]
-		arr4_5 = [string.atoi(x[5]) for x in arr4]
-		arr4_6 = [string.atoi(x[6]) for x in arr4]
-		arr5 = [x[5].strip().split(',') for x in linesList]
-		arr5_0 = [string.atoi(x[0]) for x in arr5]
-		arr5_1 = [string.atoi(x[1]) for x in arr5]
-		arr5_2 = [string.atoi(x[2]) for x in arr5]
-		arr5_3 = [string.atoi(x[3]) for x in arr5]
-		arr5_4 = [string.atoi(x[4]) for x in arr5]
-		arr5_5 = [string.atoi(x[5]) for x in arr5]
-		arr5_6 = [string.atoi(x[6]) for x in arr5]
-		arr6 = [x[6].strip().split(',') for x in linesList]
-		arr6_0 = [string.atoi(x[0]) for x in arr6]
-		arr6_1 = [string.atoi(x[1]) for x in arr6]
-		arr6_2 = [string.atoi(x[2]) for x in arr6]
-		arr6_3 = [string.atoi(x[3]) for x in arr6]
-		arr6_4 = [string.atoi(x[4]) for x in arr6]
-		arr6_5 = [string.atoi(x[5]) for x in arr6]
-		arr6_6 = [string.atoi(x[6]) for x in arr6]
-		arr7 = [x[7].strip().split(',') for x in linesList]
-		arr7_0 = [string.atoi(x[0]) for x in arr7]
-		arr7_1 = [string.atoi(x[1]) for x in arr7]
-		arr7_2 = [string.atoi(x[2]) for x in arr7]
-		arr7_3 = [string.atoi(x[3]) for x in arr7]
-		arr7_4 = [string.atoi(x[4]) for x in arr7]
-		arr7_5 = [string.atoi(x[5]) for x in arr7]
-		arr7_6 = [string.atoi(x[6]) for x in arr7]
-		arr8 = [x[8].strip().split(',') for x in linesList]
-		arr8_0 = [string.atoi(x[0]) for x in arr8]
-		arr8_1 = [string.atoi(x[1]) for x in arr8]
-		arr8_2 = [string.atoi(x[2]) for x in arr8]
-		arr8_3 = [string.atoi(x[3]) for x in arr8]
-		arr8_4 = [string.atoi(x[4]) for x in arr8]
-		arr8_5 = [string.atoi(x[5]) for x in arr8]
-		arr = arr1_0 + arr2_0 + arr3_0 + arr4_0 + arr5_0 + arr6_0
-		print("i = " + bytes(i))
-		print("Red1 Num Avg = " + bytes(sum(arr1_0)) + "/" + bytes(len(arr1_0)) + " = " + bytes(Math.avg(arr1_0)))
-		print("Red2 Num Avg = " + bytes(sum(arr2_0)) + "/" + bytes(len(arr2_0)) + " = " + bytes(Math.avg(arr2_0)))
-		print("Red3 Num Avg = " + bytes(sum(arr3_0)) + "/" + bytes(len(arr3_0)) + " = " + bytes(Math.avg(arr3_0)))
-		print("Red4 Num Avg = " + bytes(sum(arr4_0)) + "/" + bytes(len(arr4_0)) + " = " + bytes(Math.avg(arr4_0)))
-		print("Red5 Num Avg = " + bytes(sum(arr5_0)) + "/" + bytes(len(arr5_0)) + " = " + bytes(Math.avg(arr5_0)))
-		print("Red6 Num Avg = " + bytes(sum(arr6_0)) + "/" + bytes(len(arr6_0)) + " = " + bytes(Math.avg(arr6_0)))
-		print("Blue Num Avg = " + bytes(sum(arr7_0)) + "/" + bytes(len(arr7_0)) + " = " + bytes(Math.avg(arr7_0)))
-		print("RedSum Avg = " + bytes(sum(arr8_0)) + "/" + bytes(len(arr8_0)) + " = " + bytes(Math.avg(arr8_0)))
-		print("UnitSum Avg = " + bytes(sum(arr8_1)) + "/" + bytes(len(arr8_1)) + " = " + bytes(Math.avg(arr8_1)))
-		index += [i]
-		pro1 += [Math.avg(arr1_0)]
-		pro2 += [Math.avg(arr2_0)]
-		pro3 += [Math.avg(arr3_0)]
-		pro4 += [Math.avg(arr4_0)]
-		pro5 += [Math.avg(arr5_0)]
-		pro6 += [Math.avg(arr6_0)]
-		pro7 += [Math.avg(arr7_0)]
-		pro8 += [Math.avg(arr8_0)]
-		pro8_1 += [Math.avg(arr8_1)]
-	plt.figure()
-	#plt.scatter(index, pro1, s=20, c="black")
-	#plt.scatter(index, pro2, s=20, c="yellow")
-	#plt.scatter(index, pro3, s=20, c="red")
-	#plt.scatter(index, pro4, s=20, c="gold")
-	#plt.scatter(index, pro5, s=20, c="brown")
-	#plt.scatter(index, pro6, s=20, c="coral")
-	#plt.scatter(index, pro7, s=20, c="blue")
-	#plt.scatter(index, pro8, s=20, c="yellow")
-	plt.scatter(index, pro8_1, s=20, c="red")
-	plt.savefig("test.jpg")
-	plt.show()
-'''
+	arr0 = [x[0] for x in linesList]
+	arr1 = [x[1].strip().split(',') for x in linesList]
+	arr1_0 = [string.atoi(x[0]) for x in arr1]
+	arr1_1 = [string.atoi(x[1]) for x in arr1]
+	arr1_2 = [string.atoi(x[2]) for x in arr1]
+	arr1_3 = [string.atoi(x[3]) for x in arr1]
+	arr1_4 = [string.atoi(x[4]) for x in arr1]
+	arr1_5 = [string.atoi(x[5]) for x in arr1]
+	arr1_6 = [string.atoi(x[6]) for x in arr1]
+	arr2 = [x[2].strip().split(',') for x in linesList]
+	arr2_0 = [string.atoi(x[0]) for x in arr2]
+	arr2_1 = [string.atoi(x[1]) for x in arr2]
+	arr2_2 = [string.atoi(x[2]) for x in arr2]
+	arr2_3 = [string.atoi(x[3]) for x in arr2]
+	arr2_4 = [string.atoi(x[4]) for x in arr2]
+	arr2_5 = [string.atoi(x[5]) for x in arr2]
+	arr2_6 = [string.atoi(x[6]) for x in arr2]
+	arr3 = [x[3].strip().split(',') for x in linesList]
+	arr3_0 = [string.atoi(x[0]) for x in arr3]
+	arr3_1 = [string.atoi(x[1]) for x in arr3]
+	arr3_2 = [string.atoi(x[2]) for x in arr3]
+	arr3_3 = [string.atoi(x[3]) for x in arr3]
+	arr3_4 = [string.atoi(x[4]) for x in arr3]
+	arr3_5 = [string.atoi(x[5]) for x in arr3]
+	arr3_6 = [string.atoi(x[6]) for x in arr3]
+	arr4 = [x[4].strip().split(',') for x in linesList]
+	arr4_0 = [string.atoi(x[0]) for x in arr4]
+	arr4_1 = [string.atoi(x[1]) for x in arr4]
+	arr4_2 = [string.atoi(x[2]) for x in arr4]
+	arr4_3 = [string.atoi(x[3]) for x in arr4]
+	arr4_4 = [string.atoi(x[4]) for x in arr4]
+	arr4_5 = [string.atoi(x[5]) for x in arr4]
+	arr4_6 = [string.atoi(x[6]) for x in arr4]
+	arr5 = [x[5].strip().split(',') for x in linesList]
+	arr5_0 = [string.atoi(x[0]) for x in arr5]
+	arr5_1 = [string.atoi(x[1]) for x in arr5]
+	arr5_2 = [string.atoi(x[2]) for x in arr5]
+	arr5_3 = [string.atoi(x[3]) for x in arr5]
+	arr5_4 = [string.atoi(x[4]) for x in arr5]
+	arr5_5 = [string.atoi(x[5]) for x in arr5]
+	arr5_6 = [string.atoi(x[6]) for x in arr5]
+	arr6 = [x[6].strip().split(',') for x in linesList]
+	arr6_0 = [string.atoi(x[0]) for x in arr6]
+	arr6_1 = [string.atoi(x[1]) for x in arr6]
+	arr6_2 = [string.atoi(x[2]) for x in arr6]
+	arr6_3 = [string.atoi(x[3]) for x in arr6]
+	arr6_4 = [string.atoi(x[4]) for x in arr6]
+	arr6_5 = [string.atoi(x[5]) for x in arr6]
+	arr6_6 = [string.atoi(x[6]) for x in arr6]
+	arr7 = [x[7].strip().split(',') for x in linesList]
+	arr7_0 = [string.atoi(x[0]) for x in arr7]
+	arr7_1 = [string.atoi(x[1]) for x in arr7]
+	arr7_2 = [string.atoi(x[2]) for x in arr7]
+	arr7_3 = [string.atoi(x[3]) for x in arr7]
+	arr7_4 = [string.atoi(x[4]) for x in arr7]
+	arr7_5 = [string.atoi(x[5]) for x in arr7]
+	arr7_6 = [string.atoi(x[6]) for x in arr7]
+	arr8 = [x[8].strip().split(',') for x in linesList]
+	arr8_0 = [string.atoi(x[0]) for x in arr8]
+	arr8_1 = [string.atoi(x[1]) for x in arr8]
+	arr8_2 = [string.atoi(x[2]) for x in arr8]
+	arr8_3 = [string.atoi(x[3]) for x in arr8]
+	arr8_4 = [string.atoi(x[4]) for x in arr8]
+	arr8_5 = [string.atoi(x[5]) for x in arr8]
+	arr = arr1_0 + arr2_0 + arr3_0 + arr4_0 + arr5_0 + arr6_0
 	for i in range(1,34):
 		print ("redNum : " + bytes(i) + ", count = " + bytes(arr.count(i)) + "/" + bytes(len(arr)) + "(" + bytes(float(arr.count(i))/len(arr)) + ")")
 	for i in range(1, 17):
@@ -752,7 +707,124 @@ def everyYearResultFile(fileindex):
 	print ("zhiheRatio : (4:2) count = " + bytes(arr8_5.count(4)) + "/" + bytes(len(arr8_5)) + "(" + bytes(float(arr8_5.count(4))/len(arr8_5)) + ")")
 	print ("zhiheRatio : (5:1) count = " + bytes(arr8_5.count(5)) + "/" + bytes(len(arr8_5)) + "(" + bytes(float(arr8_5.count(5))/len(arr8_5)) + ")")
 	print ("zhiheRatio : (6:0) count = " + bytes(arr8_5.count(6)) + "/" + bytes(len(arr8_5)) + "(" + bytes(float(arr8_5.count(6))/len(arr8_5)) + ")")
-'''
+
+def scatterEveryYearResultFile(fileindex):
+	filename = TEST_DIR + "/" + TEST_FILE_HEAD + bytes(fileindex) + ".txt"
+	print("filename = " + filename)
+	file = open(filename, 'r')
+	linesListFull = file.readlines()
+	linesListFull = [line.strip().split('/') for line in linesListFull]
+	file.close()
+	index = []
+	pro1 = []
+	pro2 = []
+	pro3 = []
+	pro4 = []
+	pro5 = []
+	pro6 = []
+	pro7 = []
+	pro8 = []
+	pro8_1 = []
+	for i in range(31, len(linesListFull)+1):
+		linesList = linesListFull[:i]    
+		arr0 = [x[0] for x in linesList]
+		arr1 = [x[1].strip().split(',') for x in linesList]
+		arr1_0 = [string.atoi(x[0]) for x in arr1]
+		arr1_1 = [string.atoi(x[1]) for x in arr1]
+		arr1_2 = [string.atoi(x[2]) for x in arr1]
+		arr1_3 = [string.atoi(x[3]) for x in arr1]
+		arr1_4 = [string.atoi(x[4]) for x in arr1]
+		arr1_5 = [string.atoi(x[5]) for x in arr1]
+		arr1_6 = [string.atoi(x[6]) for x in arr1]
+		arr2 = [x[2].strip().split(',') for x in linesList]
+		arr2_0 = [string.atoi(x[0]) for x in arr2]
+		arr2_1 = [string.atoi(x[1]) for x in arr2]
+		arr2_2 = [string.atoi(x[2]) for x in arr2]
+		arr2_3 = [string.atoi(x[3]) for x in arr2]
+		arr2_4 = [string.atoi(x[4]) for x in arr2]
+		arr2_5 = [string.atoi(x[5]) for x in arr2]
+		arr2_6 = [string.atoi(x[6]) for x in arr2]
+		arr3 = [x[3].strip().split(',') for x in linesList]
+		arr3_0 = [string.atoi(x[0]) for x in arr3]
+		arr3_1 = [string.atoi(x[1]) for x in arr3]
+		arr3_2 = [string.atoi(x[2]) for x in arr3]
+		arr3_3 = [string.atoi(x[3]) for x in arr3]
+		arr3_4 = [string.atoi(x[4]) for x in arr3]
+		arr3_5 = [string.atoi(x[5]) for x in arr3]
+		arr3_6 = [string.atoi(x[6]) for x in arr3]
+		arr4 = [x[4].strip().split(',') for x in linesList]
+		arr4_0 = [string.atoi(x[0]) for x in arr4]
+		arr4_1 = [string.atoi(x[1]) for x in arr4]
+		arr4_2 = [string.atoi(x[2]) for x in arr4]
+		arr4_3 = [string.atoi(x[3]) for x in arr4]
+		arr4_4 = [string.atoi(x[4]) for x in arr4]
+		arr4_5 = [string.atoi(x[5]) for x in arr4]
+		arr4_6 = [string.atoi(x[6]) for x in arr4]
+		arr5 = [x[5].strip().split(',') for x in linesList]
+		arr5_0 = [string.atoi(x[0]) for x in arr5]
+		arr5_1 = [string.atoi(x[1]) for x in arr5]
+		arr5_2 = [string.atoi(x[2]) for x in arr5]
+		arr5_3 = [string.atoi(x[3]) for x in arr5]
+		arr5_4 = [string.atoi(x[4]) for x in arr5]
+		arr5_5 = [string.atoi(x[5]) for x in arr5]
+		arr5_6 = [string.atoi(x[6]) for x in arr5]
+		arr6 = [x[6].strip().split(',') for x in linesList]
+		arr6_0 = [string.atoi(x[0]) for x in arr6]
+		arr6_1 = [string.atoi(x[1]) for x in arr6]
+		arr6_2 = [string.atoi(x[2]) for x in arr6]
+		arr6_3 = [string.atoi(x[3]) for x in arr6]
+		arr6_4 = [string.atoi(x[4]) for x in arr6]
+		arr6_5 = [string.atoi(x[5]) for x in arr6]
+		arr6_6 = [string.atoi(x[6]) for x in arr6]
+		arr7 = [x[7].strip().split(',') for x in linesList]
+		arr7_0 = [string.atoi(x[0]) for x in arr7]
+		arr7_1 = [string.atoi(x[1]) for x in arr7]
+		arr7_2 = [string.atoi(x[2]) for x in arr7]
+		arr7_3 = [string.atoi(x[3]) for x in arr7]
+		arr7_4 = [string.atoi(x[4]) for x in arr7]
+		arr7_5 = [string.atoi(x[5]) for x in arr7]
+		arr7_6 = [string.atoi(x[6]) for x in arr7]
+		arr8 = [x[8].strip().split(',') for x in linesList]
+		arr8_0 = [string.atoi(x[0]) for x in arr8]
+		arr8_1 = [string.atoi(x[1]) for x in arr8]
+		arr8_2 = [string.atoi(x[2]) for x in arr8]
+		arr8_3 = [string.atoi(x[3]) for x in arr8]
+		arr8_4 = [string.atoi(x[4]) for x in arr8]
+		arr8_5 = [string.atoi(x[5]) for x in arr8]
+		arr = arr1_0 + arr2_0 + arr3_0 + arr4_0 + arr5_0 + arr6_0
+		print("i = " + bytes(i))
+		print("Red1 Num Avg = " + bytes(sum(arr1_0)) + "/" + bytes(len(arr1_0)) + " = " + bytes(Math.avg(arr1_0)))
+		print("Red2 Num Avg = " + bytes(sum(arr2_0)) + "/" + bytes(len(arr2_0)) + " = " + bytes(Math.avg(arr2_0)))
+		print("Red3 Num Avg = " + bytes(sum(arr3_0)) + "/" + bytes(len(arr3_0)) + " = " + bytes(Math.avg(arr3_0)))
+		print("Red4 Num Avg = " + bytes(sum(arr4_0)) + "/" + bytes(len(arr4_0)) + " = " + bytes(Math.avg(arr4_0)))
+		print("Red5 Num Avg = " + bytes(sum(arr5_0)) + "/" + bytes(len(arr5_0)) + " = " + bytes(Math.avg(arr5_0)))
+		print("Red6 Num Avg = " + bytes(sum(arr6_0)) + "/" + bytes(len(arr6_0)) + " = " + bytes(Math.avg(arr6_0)))
+		print("Blue Num Avg = " + bytes(sum(arr7_0)) + "/" + bytes(len(arr7_0)) + " = " + bytes(Math.avg(arr7_0)))
+		print("RedSum Avg = " + bytes(sum(arr8_0)) + "/" + bytes(len(arr8_0)) + " = " + bytes(Math.avg(arr8_0)))
+		print("UnitSum Avg = " + bytes(sum(arr8_1)) + "/" + bytes(len(arr8_1)) + " = " + bytes(Math.avg(arr8_1)))
+		index += [i]
+		pro1 += [Math.avg(arr1_0)]
+		pro2 += [Math.avg(arr2_0)]
+		pro3 += [Math.avg(arr3_0)]
+		pro4 += [Math.avg(arr4_0)]
+		pro5 += [Math.avg(arr5_0)]
+		pro6 += [Math.avg(arr6_0)]
+		pro7 += [Math.avg(arr7_0)]
+		pro8 += [Math.avg(arr8_0)]
+		pro8_1 += [Math.avg(arr8_1)]
+	plt.figure()
+	#plt.scatter(index, pro1, s=20, c="black")
+	#plt.scatter(index, pro2, s=20, c="yellow")
+	#plt.scatter(index, pro3, s=20, c="red")
+	#plt.scatter(index, pro4, s=20, c="gold")
+	#plt.scatter(index, pro5, s=20, c="brown")
+	#plt.scatter(index, pro6, s=20, c="coral")
+	#plt.scatter(index, pro7, s=20, c="blue")
+	#plt.scatter(index, pro8, s=20, c="yellow")
+	plt.scatter(index, pro8_1, s=20, c="red")
+	plt.savefig("test.jpg")
+	plt.show()
+
 
 class Math:  
 	#求极差  
@@ -823,3 +895,4 @@ class Math:
 #globalAnalyseFiles()
 #everyYearResultFiles()
 everyYearResultFile(315)
+#scatterEveryYearResultFile(315)
