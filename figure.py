@@ -822,7 +822,7 @@ def scatterEveryYearResultFile(fileindex):
 	#plt.scatter(index, pro7, s=20, c="blue")
 	#plt.scatter(index, pro8, s=20, c="yellow")
 	plt.scatter(index, pro8_1, s=20, c="red")
-	plt.savefig("test.jpg")
+	plt.savefig("test.png")
 	plt.show()
 
 
@@ -894,5 +894,5 @@ class Math:
 #analyseResultFile(11)
 #globalAnalyseFiles()
 #everyYearResultFiles()
-everyYearResultFile(315)
-#scatterEveryYearResultFile(315)
+#everyYearResultFile(315)
+scatterEveryYearResultFile(315)
